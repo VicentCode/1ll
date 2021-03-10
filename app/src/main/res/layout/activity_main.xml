@@ -3,41 +3,82 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Spinner
-        android:id="@+id/spinnerLongi"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/edLong"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Spinner
-        android:id="@+id/spinnerLongi2"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/edLong2"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerLongi" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="Longitud"
-        android:textColor="#000"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/lolasa">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Longitud"
+                android:textColor="#000"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="70dp"
+                android:layout_height="74dp"
+                android:layout_marginEnd="24dp"
+                android:elevation="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView"
+                app:srcCompat="@drawable/logoes" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Spinner
+            android:id="@+id/spinnerLong"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/ic_spinner"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edLong"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+        <Spinner
+            android:id="@+id/spinnerLong2"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/ic_spinner"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edLong2"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerLong" />
+
+
 
     <EditText
         android:id="@+id/edLong"
@@ -46,11 +87,15 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="@+id/spinnerLongi"
-        app:layout_constraintEnd_toStartOf="@+id/spinnerLongi"
+        android:padding="10dp"
+        android:maxLength="8"
+        android:hint="0.0"
+        android:inputType="numberSigned|number|numberDecimal"
+        android:background="@drawable/edstyle"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerLong"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerLong"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/spinnerLongi" />
+        app:layout_constraintTop_toTopOf="@+id/spinnerLong" />
 
     <EditText
         android:id="@+id/edLong2"
@@ -59,10 +104,40 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="@+id/spinnerLongi2"
-        app:layout_constraintEnd_toStartOf="@+id/spinnerLongi2"
+        android:padding="10dp"
+        android:hint="0.0"
+        android:maxLength="8"
+        android:background="@drawable/edstyle"
+        android:inputType="numberSigned|number|numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerLong2"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerLong2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/spinnerLongi2" />
+        app:layout_constraintTop_toTopOf="@+id/spinnerLong2" />
 
+        <ImageButton
+            android:id="@+id/delLong1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="4dp"
+            android:background="?android:selectableItemBackground"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/edLong"
+            app:layout_constraintEnd_toEndOf="@+id/edLong"
+            app:layout_constraintTop_toTopOf="@+id/edLong"
+            app:srcCompat="@drawable/ic_del_txt" />
+        <ImageButton
+            android:id="@+id/delLong2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="4dp"
+            android:background="?android:selectableItemBackground"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/edLong2"
+            app:layout_constraintEnd_toEndOf="@+id/edLong2"
+            app:layout_constraintTop_toTopOf="@+id/edLong2"
+            app:srcCompat="@drawable/ic_del_txt" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

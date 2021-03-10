@@ -13,6 +13,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:src="@drawable/km"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,13 +25,15 @@
         android:layout_alignBottom="@+id/image_logo"
         android:layout_alignParentTop="true"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:layout_toEndOf="@+id/image_logo"
         android:fontFamily="@font/poppins_medium"
         android:gravity="center"
         android:text="Kilometros"
         android:textColor="@android:color/black"
         android:textSize="14dp"
-        app:layout_constraintBottom_toBottomOf="@+id/image_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/image_logo"
-        app:layout_constraintTop_toTopOf="@+id/image_logo" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
