@@ -33,6 +33,12 @@
 
 <!-- ABOUT THE PROJECT -->
 ## Sobre el proyecto 
+<p align="center">
+<a href="https://github.com/github_username/repo_name">
+    <img src="images/sc1.png" alt="Logo" width="300" height="580">
+  <img src="images/sc2.png" alt="Logo" width="300" height="580">
+  </a>
+</p>
 
 Converte es aplicación que permite convertir unidades básicas de: Temperatura, velocidad, volumen, masa y longitud. Converte forma parte de un proyecto escolar. Compatible para Android 5.0 o superior.
 
@@ -81,10 +87,7 @@ Project Link: [https://github.com/VicentCode/Converte](https://github.com/Vicent
 <!-- ACKNOWLEDGEMENTS -->
 ## Agradecimientos
 
-* []()
-* []()
-* []()
-
+* [Google](https://github.com/google)
 
 
 
