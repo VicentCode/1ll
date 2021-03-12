@@ -34,7 +34,7 @@
 <!-- ABOUT THE PROJECT -->
 ## Sobre el proyecto 
 <p align="center">
-<a href="https://github.com/github_username/repo_name">
+<a href="">
     <img src="images/sc1.png" alt="Logo" width="300" height="580">
   <img src="images/sc2.png" alt="Logo" width="300" height="580">
   </a>
