@@ -21,6 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/lolasa">
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout"
                 android:layout_width="match_parent"
@@ -38,7 +39,7 @@
                     android:layout_marginBottom="24dp"
                     android:elevation="10dp"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text="Masa"
+                    android:text="Volumen"
                     android:textColor="#000"
                     android:textSize="30sp"
                     app:layout_constraintBottom_toBottomOf="@+id/cardView"
@@ -74,7 +75,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Spinner
-                android:id="@+id/spinnerMass"
+                android:id="@+id/spinnerVoll"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="40dp"
@@ -82,24 +83,42 @@
                 android:background="@drawable/ic_spinner"
 
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/edMass"
+                app:layout_constraintStart_toEndOf="@+id/edvoll"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
             <Spinner
-                android:id="@+id/spinnerMass2"
+                android:id="@+id/spinnerVol2"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="100dp"
                 android:background="@drawable/ic_spinner"
                 android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/edMass2"
-                app:layout_constraintTop_toBottomOf="@+id/spinnerMass" />
+                app:layout_constraintStart_toEndOf="@+id/edVol2"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerVoll" />
 
 
 
             <EditText
-                android:id="@+id/edMass"
+                android:id="@+id/edvoll"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:maxLength="8"
+                android:padding="10dp"
+                android:hint="0.0"
+                android:paddingEnd="33dp"
+                android:inputType="numberSigned|number|numberDecimal"
+                android:background="@drawable/edstyle"
+                app:layout_constraintBottom_toBottomOf="@+id/spinnerVel"
+                app:layout_constraintEnd_toStartOf="@+id/spinnerVoll"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/spinnerVoll" />
+
+            <EditText
+                android:id="@+id/edVol2"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="16dp"
@@ -107,55 +126,35 @@
                 android:ems="10"
                 android:padding="10dp"
                 android:hint="0.0"
-                android:maxLength="8"
                 android:paddingEnd="33dp"
-                android:inputType="numberSigned|number|numberDecimal"
-                android:background="@drawable/edstyle"
-                app:layout_constraintBottom_toBottomOf="@+id/spinnerMass"
-                app:layout_constraintEnd_toStartOf="@+id/spinnerMass"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/spinnerMass" />
-
-            <EditText
-                android:id="@+id/edMass2"
-                android:layout_width="0dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="8dp"
-                android:ems="10"
-                android:padding="10dp"
-                android:hint="0.0"
                 android:maxLength="8"
-                android:paddingEnd="33dp"
-
                 android:background="@drawable/edstyle"
                 android:inputType="numberSigned|number|numberDecimal"
-                app:layout_constraintBottom_toBottomOf="@+id/spinnerMass2"
-                app:layout_constraintEnd_toStartOf="@+id/spinnerMass2"
+                app:layout_constraintBottom_toBottomOf="@+id/spinnerVel2"
+                app:layout_constraintEnd_toStartOf="@+id/spinnerVol2"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/spinnerMass2" />
+                app:layout_constraintTop_toTopOf="@+id/spinnerVol2" />
 
             <ImageButton
-                android:id="@+id/delMass1"
+                android:id="@+id/dellVol1"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_marginEnd="4dp"
                 android:background="?android:selectableItemBackground"
                 android:focusable="true"
-                app:layout_constraintBottom_toBottomOf="@+id/edMass"
-                app:layout_constraintEnd_toEndOf="@+id/edMass"
-                app:layout_constraintTop_toTopOf="@+id/edMass"
+                app:layout_constraintBottom_toBottomOf="@+id/edvoll"
+                app:layout_constraintEnd_toEndOf="@+id/edvoll"
+                app:layout_constraintTop_toTopOf="@+id/edvoll"
                 app:srcCompat="@drawable/ic_del_txt" />
+
             <ImageButton
-                android:id="@+id/delMass2"
+                android:id="@+id/dellVol2"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_marginEnd="4dp"
                 android:background="?android:selectableItemBackground"
                 android:focusable="true"
-                app:layout_constraintBottom_toBottomOf="@+id/edMass2"
-                app:layout_constraintEnd_toEndOf="@+id/edMass2"
-                app:layout_constraintTop_toTopOf="@+id/edMass2"
+                app:layout_constraintBottom_toBottomOf="@+id/edVol2"
+                app:layout_constraintEnd_toEndOf="@+id/edVol2"
+                app:layout_constraintTop_toTopOf="@+id/edVol2"
                 app:srcCompat="@drawable/ic_del_txt" />
 
             <View
@@ -188,10 +187,11 @@
                 android:text="="
                 android:textColor="@color/black"
                 android:textSize="30sp"
-                app:layout_constraintBottom_toTopOf="@+id/edMass2"
+                app:layout_constraintBottom_toTopOf="@+id/edVol2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spinnerMass" />
+                app:layout_constraintTop_toBottomOf="@+id/spinnerVoll" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

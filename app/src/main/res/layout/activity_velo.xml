@@ -21,6 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/lolasa">
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout"
                 android:layout_width="match_parent"
@@ -38,7 +39,7 @@
                     android:layout_marginBottom="24dp"
                     android:elevation="10dp"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text="Masa"
+                    android:text="Velocidad"
                     android:textColor="#000"
                     android:textSize="30sp"
                     app:layout_constraintBottom_toBottomOf="@+id/cardView"
@@ -74,7 +75,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Spinner
-                android:id="@+id/spinnerMass"
+                android:id="@+id/spinnerVel"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="40dp"
@@ -82,24 +83,42 @@
                 android:background="@drawable/ic_spinner"
 
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/edMass"
+                app:layout_constraintStart_toEndOf="@+id/edvel"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
             <Spinner
-                android:id="@+id/spinnerMass2"
+                android:id="@+id/spinnerVel2"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="100dp"
                 android:background="@drawable/ic_spinner"
                 android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/edMass2"
-                app:layout_constraintTop_toBottomOf="@+id/spinnerMass" />
+                app:layout_constraintStart_toEndOf="@+id/edVel2"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerVel" />
 
 
 
             <EditText
-                android:id="@+id/edMass"
+                android:id="@+id/edvel"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:maxLength="8"
+                android:padding="10dp"
+                android:hint="0.0"
+                android:paddingEnd="33dp"
+                android:inputType="numberSigned|number|numberDecimal"
+                android:background="@drawable/edstyle"
+                app:layout_constraintBottom_toBottomOf="@+id/spinnerVel"
+                app:layout_constraintEnd_toStartOf="@+id/spinnerVel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/spinnerVel" />
+
+            <EditText
+                android:id="@+id/edVel2"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="16dp"
@@ -107,55 +126,35 @@
                 android:ems="10"
                 android:padding="10dp"
                 android:hint="0.0"
-                android:maxLength="8"
                 android:paddingEnd="33dp"
-                android:inputType="numberSigned|number|numberDecimal"
-                android:background="@drawable/edstyle"
-                app:layout_constraintBottom_toBottomOf="@+id/spinnerMass"
-                app:layout_constraintEnd_toStartOf="@+id/spinnerMass"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/spinnerMass" />
-
-            <EditText
-                android:id="@+id/edMass2"
-                android:layout_width="0dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="8dp"
-                android:ems="10"
-                android:padding="10dp"
-                android:hint="0.0"
                 android:maxLength="8"
-                android:paddingEnd="33dp"
-
                 android:background="@drawable/edstyle"
                 android:inputType="numberSigned|number|numberDecimal"
-                app:layout_constraintBottom_toBottomOf="@+id/spinnerMass2"
-                app:layout_constraintEnd_toStartOf="@+id/spinnerMass2"
+                app:layout_constraintBottom_toBottomOf="@+id/spinnerVel2"
+                app:layout_constraintEnd_toStartOf="@+id/spinnerVel2"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/spinnerMass2" />
+                app:layout_constraintTop_toTopOf="@+id/spinnerVel2" />
 
             <ImageButton
-                android:id="@+id/delMass1"
+                android:id="@+id/dellVel1"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_marginEnd="4dp"
                 android:background="?android:selectableItemBackground"
                 android:focusable="true"
-                app:layout_constraintBottom_toBottomOf="@+id/edMass"
-                app:layout_constraintEnd_toEndOf="@+id/edMass"
-                app:layout_constraintTop_toTopOf="@+id/edMass"
+                app:layout_constraintBottom_toBottomOf="@+id/edvel"
+                app:layout_constraintEnd_toEndOf="@+id/edvel"
+                app:layout_constraintTop_toTopOf="@+id/edvel"
                 app:srcCompat="@drawable/ic_del_txt" />
+
             <ImageButton
-                android:id="@+id/delMass2"
+                android:id="@+id/dellVel2"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_marginEnd="4dp"
                 android:background="?android:selectableItemBackground"
                 android:focusable="true"
-                app:layout_constraintBottom_toBottomOf="@+id/edMass2"
-                app:layout_constraintEnd_toEndOf="@+id/edMass2"
-                app:layout_constraintTop_toTopOf="@+id/edMass2"
+                app:layout_constraintBottom_toBottomOf="@+id/edVel2"
+                app:layout_constraintEnd_toEndOf="@+id/edVel2"
+                app:layout_constraintTop_toTopOf="@+id/edVel2"
                 app:srcCompat="@drawable/ic_del_txt" />
 
             <View
@@ -188,10 +187,11 @@
                 android:text="="
                 android:textColor="@color/black"
                 android:textSize="30sp"
-                app:layout_constraintBottom_toTopOf="@+id/edMass2"
+                app:layout_constraintBottom_toTopOf="@+id/spinnerVel2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spinnerMass" />
+                app:layout_constraintTop_toBottomOf="@+id/edvel" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

@@ -18,6 +18,8 @@ public class PrincipalActivit extends AppCompatActivity {
         setContentView(R.layout.activity_principal);
 
         CardView cardMasa = findViewById(R.id.cardMasa);
+        CardView cardvel = findViewById(R.id.cardvelocidad);
+        CardView cardvolm = findViewById(R.id.cardvolume);
         CardView cardTemp = findViewById(R.id.cardTemp);
         CardView CardLongi = findViewById(R.id.cardlongi);
 
@@ -41,6 +43,20 @@ public class PrincipalActivit extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                     Intent intent = new Intent(PrincipalActivit.this, MassActivity.class);
+                PrincipalActivit.this.startActivity(intent);
+            }
+        });
+        cardvel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PrincipalActivit.this, ActivityVelo.class);
+                PrincipalActivit.this.startActivity(intent);
+            }
+        });
+        cardvolm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PrincipalActivit.this, ActivityVolm.class);
                 PrincipalActivit.this.startActivity(intent);
             }
         });

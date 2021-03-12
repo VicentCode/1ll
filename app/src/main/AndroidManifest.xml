@@ -9,10 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ConverteNoActionBar">
-        <activity android:name=".TempActivity"></activity>
+        <activity android:name=".PrincipalActivit"></activity>
+        <activity android:name=".ActivityVolm" />
+        <activity android:name=".ActivityVelo" />
+        <activity android:name=".TempActivity" />
         <activity android:name=".MassActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".PrincipalActivit">
+        <activity android:name=".splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
