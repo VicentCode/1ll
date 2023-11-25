@@ -78,7 +78,7 @@ Consulte [open issues](https://github.com/VicentCode/Converte/issues) para obten
 <!-- CONTACT -->
 ## Contacto
 
-VicentCode - [@twitter_VincentCode](https://twitter.com/vicentcodes) - email
+VicentCode - [@twitter_VicentCodes](https://twitter.com/vicentcodes) - email
 
 Project Link: [https://github.com/VicentCode/Converte](https://github.com/VicentCode/Converte)
 
